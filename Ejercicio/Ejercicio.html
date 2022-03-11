@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Ejercicio</title>
+</head>
+
+<body>
+    <script language="JavaScript">
+        var frase;
+        function filtroVocales(frase) {
+            const vocales = ["a", "e", "i", "o", "u", "á", "é", "í", "ó", "ú"];
+            let vocales_frase = "";
+            for (let letra of frase.toLowerCase()) {
+                if (vocales.includes(letra)) {
+                    vocales_frase = vocales_frase + letra;
+                }
+
+            }
+            console.log(vocales_frase);
+            return vocales_frase;
+        }
+
+        function filtroConstantes(frase) {
+            const constantes = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "ñ", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"];
+            let constantes_frase = "";
+            for (let letra of frase.toLowerCase()) {
+                if (constantes.includes(letra)) {
+                    constantes_frase = constantes_frase + letra;
+                }
+
+            }
+            console.log(constantes_frase);
+            return constantes_frase;
+        }
+
+        frase = prompt('Ingrese una frase', '');        
+        document.write("<h2>VOCALES DE LA FRASE</h2>");      
+        document.write(filtroVocales(frase));
+        document.write();
+        document.write("<h2>cONSONANTES DE LA FRASE</h2>");
+        document.write(filtroConstantes(frase));
+        
+        
+        
+
+    </script>
+
+    <script src="metodos.js"> </script>
+</body>
+
+</html>
